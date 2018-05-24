@@ -1,0 +1,55 @@
+.container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+}
+
+.card {
+  padding: 1%;
+}
+
+img {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+a {
+  display: inline-block;
+  width: 150px;
+  height: 25px;
+  background-color: green;
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
+  margin-top: 5px;
+}
+
+.formCenter {
+  margin: 0 auto;
+}
+
+input {
+  margin-top: 5px;
+  padding-left: 5px;
+  width: 150px;
+  border: 2px solid black;
+  height: 25px;
+}
+select {
+  margin-top: 5px;
+  padding-left: 5px;
+  border: 2px solid black;
+  width: 158px;
+  height: 25px;
+}
+button {
+  width: 150px;
+  height: 25px;
+  margin-top: 10px;
+  background-color: green;
+  border-radius: 8px;
+  color: white;
+}

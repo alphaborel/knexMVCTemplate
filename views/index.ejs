@@ -1,10 +1,40 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
 
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="">Book Discussion</h2>
+    <div class="row">
+      <a class="text-darken-4" href="/addbook">Add a new book</a>
+      <div class="row">
+        <% for(var i = 0; i<results.length; i++){ %>
+
+            <div class="card">
+              <h4><%= results[i].title%></h4>
+              <div class="card-image">
+                <img src="<%= results[i].img_url %>" alt="book picture">
+              </div>
+              <!-- end card -->
+              <p>
+                <%= results[i].description %>
+              </p>
+              <a href="/discuss">Discuss</a>
+            </div>
+            <!--end card -->
+          <% } %>
+      </div>
+      <!--end row -->
+    </div>
+
+  </div>
+  <!--end container -->
+
+</body>
+
 </html>
