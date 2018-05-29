@@ -9,20 +9,21 @@
 
 <body>
   <div class="container">
+    <a href="/">Cancel Addition</a>
     <div class="formCenter">
         <h3>New Book</h3>
         <form action="/addbook" method="post">
           <input type="text" name="bookTitleInput" placeholder="Title" required><br>
           <input type="text" name="imgURLInput" placeholder="IMG Url"><br>
           <input type="text" name="bookDescInput" placeholder="Description" required><br>
-          <select>
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
+          <select name="authorPick">
+            <option>Authors</option>
+            <% for(var i = 0; i<results.length; i++){ %>
+            <option value="<%= results[i].auth_name %>"><%= results[i].auth_name %></option>
+            <% } %>
           </select>
           <br>
-          <button class="waves-effect waves-light btn-large" type="submit" name="button">Create</button>
+          <button type="submit" name="btn">Create</button>
         </form>
         <div class="">
           <a href="/newauth">Add new author</a>

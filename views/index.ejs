@@ -16,15 +16,15 @@
         <% for(var i = 0; i<results.length; i++){ %>
 
             <div class="card">
-              <h4><%= results[i].title%></h4>
+              <h4><%= results[i].title %></h4>
               <div class="card-image">
-                <img src="<%= results[i].img_url %>" alt="book picture">
+                <img src="<%= results[i].img_url %>" alt="book picture"/>
               </div>
               <!-- end card -->
               <p>
                 <%= results[i].description %>
               </p>
-              <a href="/discuss">Discuss</a>
+              <a href="/discuss/<%= results[i].id %>">Discuss</a>
             </div>
             <!--end card -->
           <% } %>

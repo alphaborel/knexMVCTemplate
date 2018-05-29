@@ -3,16 +3,27 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Discussion</title>
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
 </head>
+
 <body>
   <div class="container">
-    <div class="row">
-
-    </div>
-
-  </div>
+    <h2><%= feed[0].title %></h2>
+    <img src="<%= feed[0].img_url %>" alt="book picture">
+    <p>
+      <%= feed[0].description %>
+    </p>
+    <% for(var i = 0; i<feed.length; i++){ %>
+        <div>
+          <h4><%= feed[i].name %></h4>
+          <p>
+            <%= feed[i].comments %>
+          </p>
+        </div>
+        <!--end comments -->
+      <% } %>
+  </div> <!--end container -->
 
 </body>
-
 </html>
